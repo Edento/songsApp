@@ -4,8 +4,5 @@ songsApp.config(function($routeProvider) {
         .when('/', {
             templateUrl: 'pages/game.html',
             controller: 'gameCtrl'
-        })
-        .when('/results', {
-            templateUrl: 'pages/results.html',
         });
 });
