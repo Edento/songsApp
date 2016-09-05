@@ -101,9 +101,7 @@ songsApp.controller('gameCtrl', ['$scope', '$routeParams', 'itunesService', func
     };
 
     var handleCorrectAnswer = function() {
-        console.log("user answer before: " + $scope.userAnswer)
         $scope.userAnswer = '';
-        console.log("user answer after" + $scope.userAnswer);
         $scope.game.userDidGuess.push($scope.game.currentRound.artist);
         addScore();
         newRound();
