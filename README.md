@@ -7,8 +7,9 @@ I used AngularJS for front-end, Node.js for backend and iTunes API for music dat
 
 
 
-Limitations: 
+Limitations/TBD: 
 * Currently supports limitted number of artists
+* Need to add visual feedback for the user (on correct/wrong answer) besides the score
 
 
 <b>How to run locally</b>
