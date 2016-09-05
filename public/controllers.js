@@ -3,6 +3,7 @@ songsApp.controller('gameCtrl', ['$scope', '$routeParams', 'itunesService', func
 
     $scope.itunesService = itunesService;
     $scope.userAnswer = null;
+    $scope.toggleAnimation = false;
 
     var newGame = function() {
         $scope.game = {
@@ -52,6 +53,7 @@ songsApp.controller('gameCtrl', ['$scope', '$routeParams', 'itunesService', func
         currentRound.albums = itunesService.current.albums;
         currentRound.attempt = 1;
         $scope.game.round++;
+        $scope.toggleAnimation = false;
     };
 
     /**
@@ -114,6 +116,7 @@ songsApp.controller('gameCtrl', ['$scope', '$routeParams', 'itunesService', func
     };
     var addScore = function() {
         $scope.game.score += getScoreByAttempt($scope.game.currentRound.attempt);
+        $scope.toggleAnimation = true;
     };
 
     var getScoreByAttempt = function(attempt) {
@@ -124,8 +127,8 @@ songsApp.controller('gameCtrl', ['$scope', '$routeParams', 'itunesService', func
         };
         return scores[attempt].points;
     };
-    $scope.play();
 
+    $scope.play();
     $scope.getScoreByAttempt = getScoreByAttempt;
 
 

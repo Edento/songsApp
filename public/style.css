@@ -77,6 +77,11 @@ footer {
     color: #DFDFDF;
 }
 
+.animation {
+    margin-top: 10px;
+    font-size: 36px;
+}
+
 html {
     height: 100%;
     background-color: #9d34ad;

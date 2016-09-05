@@ -38,5 +38,6 @@
     </section>
 </div>
 <footer>
-    <h3>Your total score: {{ game.score }}</h3>
+    <h3>Your total score:</h3>
+    <div class="animation" ng-class="{'animated bounceIn': toggleAnimation}"> {{ game.score }} </div>
 </footer>
