@@ -50,11 +50,36 @@ songsApp.service('itunesService', ['$resource', function($resource) {
     }, {
         name: "U2",
         id: "78500"
+    }, {
+        name: "Owl City",
+        id: "264481094"
+    }, {
+        name: "Queen",
+        id: "3296287"
+    }, {
+        name: "The Rolling Stones",
+        id: "1249595"
+    }, {
+        name: "Scorpions",
+        id: "602212"
+    }, {
+        name: "Led Zeppelin",
+        id: "994656"
+    }, {
+        name: "Bob Dylan",
+        id: "462006"
+    }, {
+        name: "Rihanna",
+        id: "63346553"
+    }, {
+        name: "Green Day",
+        id: "954266"
     }];
 
     var self = this;
     self.current = {
         artist: '',
+        id: '',
         albums: []
     };
 
@@ -77,18 +102,11 @@ songsApp.service('itunesService', ['$resource', function($resource) {
                 limit: limit,
             },
             function(response) {
-
-                if (response.resultCount < 4) {
-                    // not enough albums to show...
-                    // HOW TO RECALL THAT?
-
-                } else {
-
-                    self.current.artist = response.results[0].artistName;
-                    var len = response.results.length;
-                    self.current.albums = getRandomAlbums(response.results.splice(1, len - 1));
-                    callback();
-                }
+                self.current.artist = response.results[0].artistName;
+                self.current.id = response.results[0].artistId;
+                var len = response.results.length;
+                self.current.albums = getRandomAlbums(response.results.splice(1, len - 1));
+                callback();
             }
         );
     };
@@ -114,9 +132,6 @@ songsApp.service('itunesService', ['$resource', function($resource) {
         for (var i = 0; i < indexes.length; i++) {
             indexes[i] = albums[i];
         }
-
-        console.log('random array is:');
-        console.log(indexes);
         return indexes;
 
 
