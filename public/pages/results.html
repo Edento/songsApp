@@ -1,0 +1,14 @@
+<h1>Game Over</h1>
+
+    <h2>Your total score: {{ game.score }}</h2>
+    <section class="correct">
+        <ul class="list-group">
+            <li class="list-group-item" ng-repeat="artist in game.userDidGuess">{{ artist }}</li>
+
+        </ul>
+    </section>
+    <section class="wrong">
+        <ul class="list-group">
+            <li class="list-group-item" ng-repeat="artist in game.userDidntGuess">{{ artist }}</li>
+        </ul>
+    </section>
