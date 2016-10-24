@@ -1,43 +1,51 @@
-<article class="description">
-    <p>Welcome, stranger!</p>
-    <p>This game has 5 rounds. In each round a famous artist/band is chosen and you have to guess its name by the albums which will be shown to the left. You have 3 attempts to guess the artists name, notice the points you can gain decrese with wach attempt.</p>
-</article>
-<div class="main" ng-cloak>
-    <section class="albums">
-        <h2 class="text">Round: {{ game.round }}</h2>
-        <article class="well">
-            {{ game.currentRound.albums[0].collectionName }}
-        </article>
-        <article class="well" ng-if="game.currentRound.attempt >1">
-            {{ game.currentRound.albums[1].collectionName }}
-        </article>
-        <article class="well" ng-if="game.currentRound.attempt >2">
-            {{ game.currentRound.albums[2].collectionName }}
-        </article>
-    </section>
-    <section class="answer">
-        <h2>For {{ getCurrentAttemptScore() }} point(s):</h2>
-        <form>
-            <div class="form-group ">
-                <label for="user">Who is the artist (enter exact name):</label>
-                <input type="text" class="form-control" id="user" ng-model="userAnswer">
+<section class="game">
+    <div class="description">
+        <p class="text">Welcome, stranger!</p>
+        <p class="text">This game has 5 rounds. In each round a famous artist/band is chosen and you have to guess its name by the albums which will be shown to the left. You have 3 attempts to guess the artists name, notice the points you can gain decrese with wach
+            attempt.
+        </p>
+    </div>
+    <div class="score">
+        <span class="text">Score</span>
+        <div class="text animation" ng-class="{'animated bounceIn': toggleAnimation}"> {{ game.score }} </div>
+    </div>
+    <div class="wrap_container" ng-cloak>
+        <div class="sub_container first">
+            <h2 class="title">Round: {{ game.round }}</h2>
+            <div class="album">
+                {{ game.currentRound.albums[0].collectionName }}
             </div>
+            <div class="album" ng-if="game.currentRound.attempt >1">
+                {{ game.currentRound.albums[1].collectionName }}
+            </div>
+            <div class="album" ng-if="game.currentRound.attempt >2">
+                {{ game.currentRound.albums[2].collectionName }}
+            </div>
+        </div>
+        <div class="sub_container second">
 
-            <button type="submit " class="btn btn-default " ng-click="checkUserAnswer(userAnswer)">Submit</button>
-        </form>
-        <article class="hint" ng-if="game.currentRound.attempt >2" ng-hide="game.isOver">
-            <p>Hint:</p>
-            <img class="thumbnail" ng-src="{{game.currentRound.albums[2].artworkUrl100}}" alt="Album artwork" />
-        </article>
-        <article class="results" ng-if="game.isOver">
-            <h3 class="text">Game Over</h3>
-            <p class="text">Your total score: {{ game.score }} ({{ 100*game.score/25}}%)</p>
-            <button type="submit " class="btn btn-default " ng-click="play()">Restart</button>
+            <h2 class="title">For {{ getCurrentAttemptScore() }} point(s):</h2>
+            <form class="form">
+                <div class="answer">
+                    <label for="user">Who is the artist (enter exact name):</label>
+                    <input type="text" class="form-control" id="user" ng-model="userAnswer">
+                </div>
+                <button type="submit" class="button" ng-click="checkUserAnswer(userAnswer)">Submit</button>
+            </form>
+            <div class="hint" ng-if="game.currentRound.attempt >2" ng-hide="game.isOver">
+                <p class="text">Hint:</p>
+                <img class="thumbnail" ng-src="{{game.currentRound.albums[2].artworkUrl100}}" alt="Album artwork" />
+            </div>
+            <div class="results" ng-if="game.isOver">
+                <h3 class="title">Game Over</h3>
+                <p class="text">Your total score: {{ game.score }} ({{ 100*game.score/25}}%)</p>
+                <button type="submit " class="button" ng-click="play()">Restart</button>
+            </div>
+        </div>
+    </div>
+    <!--<div class="score">
+		<h3>Your total score:</h3>
+		<div class="animation" ng-class="{'animated bounceIn': toggleAnimation}"> {{ game.score }} </div>
+	</div>-->
 
-        </article>
-    </section>
-</div>
-<footer>
-    <h3>Your total score:</h3>
-    <div class="animation" ng-class="{'animated bounceIn': toggleAnimation}"> {{ game.score }} </div>
-</footer>
+</section>
