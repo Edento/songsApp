@@ -19,6 +19,7 @@ body {
         margin: 0 auto;
         display: block;
         color: $cl_dark;
+        padding-bottom: 100px;
         .description {
             color: $cl_bright;
             width: 95%;
@@ -26,6 +27,7 @@ body {
             padding-bottom: 10px;
         }
         .score {
+            color: $cl_bright;
             text-align: center;
             margin-left: 90%;
             .animation {
@@ -51,7 +53,7 @@ body {
                     display: block;
                 }
                 &.first {
-                    margin-left: 3%;
+                    
                     background: $cl_dark;
                     color: $cl_bright;
                     width: 40%;
@@ -127,6 +129,55 @@ body {
         }
         .score {}
     }
+    @media (max-width: 600px) {
+        .game {
+            width: 97%;
+            .description {
+                font-size: 13px;
+                line-height: 17px;
+            }
+            .score {
+                margin: 0 auto;
+            }
+            .wrap_container {
+                height: auto;
+                .sub_container {
+                    &.first {
+                        display: block;
+                        width: 100%;
+                        margin-left: 0;
+                        padding: 10px;
+                        margin-left: 0;
+                        .title {
+                            margin-top: 10px;
+                        }
+                        .album {
+                            width: 100%;
+                            margin-left: 0;
+                        }
+                    }
+                    &.second {
+                        .title {
+                            padding-left: 4%;
+                        }
+                        display: block;
+                        width: 100%;
+                        padding: 10px;
+                        margin-left: 0;
+                        .form {
+                            margin-left: 10px;
+                            .answer {
+                                .form-control {
+                                    width: 90%;
+                                    max-width: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
     font-family: 'Open Sans',
     sans-serif;
     background: transparent;
@@ -146,5 +197,3 @@ body {
     background-image: radial-gradient(ellipse farthest-corner at left top, rgb(78, 9, 120) 0%, rgb(236, 95, 225) 100%);
     background-image: -ms-radial-gradient(left top, ellipse farthest-corner, rgb(78, 9, 120) 0%, rgb(236, 95, 225) 100%);
 }
-
-@media (min-width: 1200px) {}
