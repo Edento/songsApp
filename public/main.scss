@@ -53,22 +53,30 @@ body {
                     display: block;
                 }
                 &.first {
-                    
                     background: $cl_dark;
                     color: $cl_bright;
                     width: 40%;
+                    padding: 20px;
                     .title {
                         padding-left: 5%;
                         padding-bottom: 20px;
+                        margin-top: 0;
+                        margin-bottom: 0;
                     }
                     .album {
                         padding-left: 5%;
                         background: $cl_bright;
                         color: $cl_dark;
                         padding: 10px;
-                        width: 90%;
-                        margin: (10px 0 0 10px);
+                        width: 97%;
+                        margin-bottom: 10px;
                         border-radius: 2px;
+                    }
+                    .hint {
+                        margin-top: 10px;
+                        .text {
+                            margin-bottom: 0;
+                        }
                     }
                 }
                 &.second {
@@ -94,12 +102,6 @@ body {
                             &:hover {
                                 background: lighten($cl_dark, $amount: 15%);
                             }
-                        }
-                    }
-                    .hint {
-                        margin-top: 20px;
-                        .text {
-                            margin-bottom: 0;
                         }
                     }
                     .results {

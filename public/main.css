@@ -61,18 +61,25 @@ body {
         body .game .wrap_container .sub_container.first {
           background: #333;
           color: #DFDFDF;
-          width: 40%; }
+          width: 40%;
+          padding: 20px; }
           body .game .wrap_container .sub_container.first .title {
             padding-left: 5%;
-            padding-bottom: 20px; }
+            padding-bottom: 20px;
+            margin-top: 0;
+            margin-bottom: 0; }
           body .game .wrap_container .sub_container.first .album {
             padding-left: 5%;
             background: #DFDFDF;
             color: #333;
             padding: 10px;
-            width: 90%;
-            margin: 10px 0 0 10px;
+            width: 97%;
+            margin-bottom: 10px;
             border-radius: 2px; }
+          body .game .wrap_container .sub_container.first .hint {
+            margin-top: 10px; }
+            body .game .wrap_container .sub_container.first .hint .text {
+              margin-bottom: 0; }
         body .game .wrap_container .sub_container.second {
           margin-left: 4%;
           width: 50%; }
@@ -90,10 +97,6 @@ body {
             transition: background 0.2s; }
             body .game .wrap_container .sub_container.second .form .button:hover {
               background: #595959; }
-          body .game .wrap_container .sub_container.second .hint {
-            margin-top: 20px; }
-            body .game .wrap_container .sub_container.second .hint .text {
-              margin-bottom: 0; }
           body .game .wrap_container .sub_container.second .results {
             background: #333;
             color: #DFDFDF;

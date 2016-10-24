@@ -21,6 +21,10 @@
             <div class="album" ng-if="game.currentRound.attempt >2">
                 {{ game.currentRound.albums[2].collectionName }}
             </div>
+            <div class="hint" ng-if="game.currentRound.attempt >2" ng-hide="game.isOver">
+                <p class="text">Hint:</p>
+                <img class="thumbnail" ng-src="{{game.currentRound.albums[2].artworkUrl100}}" alt="Album artwork" />
+            </div>
         </div>
         <div class="sub_container second">
 
@@ -32,10 +36,6 @@
                 </div>
                 <button type="submit" class="button" ng-click="checkUserAnswer(userAnswer)">Submit</button>
             </form>
-            <div class="hint" ng-if="game.currentRound.attempt >2" ng-hide="game.isOver">
-                <p class="text">Hint:</p>
-                <img class="thumbnail" ng-src="{{game.currentRound.albums[2].artworkUrl100}}" alt="Album artwork" />
-            </div>
             <div class="results" ng-if="game.isOver">
                 <h3 class="title">Game Over</h3>
                 <p class="text">Your total score: {{ game.score }} ({{ 100*game.score/25}}%)</p>
@@ -43,9 +43,4 @@
             </div>
         </div>
     </div>
-    <!--<div class="score">
-		<h3>Your total score:</h3>
-		<div class="animation" ng-class="{'animated bounceIn': toggleAnimation}"> {{ game.score }} </div>
-	</div>-->
-
-</section>
+ </section>
