@@ -26,8 +26,9 @@ header {
     line-height: 0.8;
 }
 
-.musicNote {
+.icon {
     width: 35px;
+    fill: red
 }
 
 .description {

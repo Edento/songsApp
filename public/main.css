@@ -1,0 +1,151 @@
+body {
+  color: #DFDFDF;
+  padding-top: 20px;
+  font-family: 'Open Sans', sans-serif;
+  background: transparent;
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #9d34ad;
+  /* IE9, iOS 3.2+ */
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxyYWRpYWxHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIGN4PSIwJSIgY3k9IjAlIiByPSIxNDEuNDIxMzU2MjM3MzA5NSUiPjxzdG9wIHN0b3AtY29sb3I9IiM0ZTA5NzgiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwIi8+PHN0b3Agc3RvcC1jb2xvcj0iI2VjNWZlMSIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjEiLz48L3JhZGlhbEdyYWRpZW50PjxyZWN0IHg9Ii01MCIgeT0iLTUwIiB3aWR0aD0iMTAxIiBoZWlnaHQ9IjEwMSIgZmlsbD0idXJsKCN2c2dnKSIgLz48L3N2Zz4=);
+  /* Android 2.3- hack (needed for the actual radial gradient) */
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxyYWRpYWxHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIGN4PSIwJSIgY3k9IjAlIiByPSIxNDEuNDIxMzU2MjM3MzA5NSUiPjxzdG9wIHN0b3AtY29sb3I9IiM0ZTA5NzgiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwIi8+PHN0b3Agc3RvcC1jb2xvcj0iI2VjNWZlMSIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjEiLz48L3JhZGlhbEdyYWRpZW50PjxyZWN0IHg9Ii01MCIgeT0iLTUwIiB3aWR0aD0iMTAxIiBoZWlnaHQ9IjEwMSIgZmlsbD0idXJsKCN2c2dnKSIgLz48L3N2Zz4=), -webkit-gradient(radial, left top, 0, left top, 887, color-stop(0, #4e0978), color-stop(1, #ec5fe1));
+  /* Android 2.3 */
+  background-image: -webkit-radial-gradient(left top, ellipse farthest-corner, #4e0978 0%, #ec5fe1 100%);
+  /* IE10+ */
+  background-image: radial-gradient(ellipse farthest-corner at left top, #4e0978 0%, #ec5fe1 100%);
+  background-image: -ms-radial-gradient(left top, ellipse farthest-corner, #4e0978 0%, #ec5fe1 100%); }
+  body .header .icon {
+    width: 35px;
+    display: block;
+    margin: 0 auto; }
+  body .header .title {
+    text-align: center; }
+  body .game {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: block;
+    color: #333;
+    padding-bottom: 100px; }
+    body .game .description {
+      color: #DFDFDF;
+      width: 95%;
+      margin: 0 auto;
+      padding-bottom: 10px; }
+    body .game .score {
+      color: #DFDFDF;
+      text-align: center;
+      margin-left: 90%; }
+      body .game .score .animation {
+        font-size: 36px;
+        line-height: 1;
+        padding-bottom: 5px; }
+    body .game .wrap_container {
+      max-width: 1000px;
+      border-radius: 5px;
+      border: 1px solid #262626;
+      height: 400px;
+      background: #ddd;
+      -webkit-box-shadow: 5px 6px 5px -5px rgba(0, 0, 0, 0.68);
+      -moz-box-shadow: 5px 6px 5px -5px rgba(0, 0, 0, 0.68);
+      box-shadow: 5px 6px 5px -5px rgba(0, 0, 0, 0.68); }
+      body .game .wrap_container .sub_container {
+        display: inline-block;
+        height: 100%;
+        vertical-align: top; }
+        body .game .wrap_container .sub_container .title {
+          display: block; }
+        body .game .wrap_container .sub_container.first {
+          background: #333;
+          color: #DFDFDF;
+          width: 40%;
+          padding: 20px; }
+          body .game .wrap_container .sub_container.first .title {
+            padding-left: 5%;
+            padding-bottom: 20px;
+            margin-top: 0;
+            margin-bottom: 0; }
+          body .game .wrap_container .sub_container.first .album {
+            padding-left: 5%;
+            background: #DFDFDF;
+            color: #333;
+            padding: 10px;
+            width: 97%;
+            margin-bottom: 10px;
+            border-radius: 2px; }
+          body .game .wrap_container .sub_container.first .hint {
+            margin-top: 10px; }
+            body .game .wrap_container .sub_container.first .hint .text {
+              margin-bottom: 0; }
+        body .game .wrap_container .sub_container.second {
+          margin-left: 4%;
+          width: 50%; }
+          body .game .wrap_container .sub_container.second .form .answer .form-control {
+            width: 95%;
+            max-width: 350px;
+            margin-bottom: 10px; }
+          body .game .wrap_container .sub_container.second .form .button {
+            padding: 10px 20px;
+            background: #333;
+            color: #DFDFDF;
+            outline: none;
+            border-radius: 2px;
+            border: none;
+            transition: background 0.2s; }
+            body .game .wrap_container .sub_container.second .form .button:hover {
+              background: #595959; }
+          body .game .wrap_container .sub_container.second .results {
+            background: #333;
+            color: #DFDFDF;
+            padding: 20px;
+            margin-top: 10px; }
+            body .game .wrap_container .sub_container.second .results .title {
+              margin-top: 0; }
+            body .game .wrap_container .sub_container.second .results .button {
+              padding: 10px 20px;
+              background: #DFDFDF;
+              color: #333;
+              outline: none;
+              border-radius: 2px;
+              border: none;
+              transition: background 0.2s; }
+              body .game .wrap_container .sub_container.second .results .button:hover {
+                background: #b9b9b9; }
+  @media (max-width: 600px) {
+    body .game {
+      width: 97%; }
+      body .game .description {
+        font-size: 13px;
+        line-height: 17px; }
+      body .game .score {
+        margin: 0 auto; }
+      body .game .wrap_container {
+        height: auto; }
+        body .game .wrap_container .sub_container.first {
+          display: block;
+          width: 100%;
+          margin-left: 0;
+          padding: 10px;
+          margin-left: 0; }
+          body .game .wrap_container .sub_container.first .title {
+            margin-top: 10px; }
+          body .game .wrap_container .sub_container.first .album {
+            width: 100%;
+            margin-left: 0; }
+        body .game .wrap_container .sub_container.second {
+          display: block;
+          width: 100%;
+          padding: 10px;
+          margin-left: 0; }
+          body .game .wrap_container .sub_container.second .title {
+            padding-left: 4%; }
+          body .game .wrap_container .sub_container.second .form {
+            margin-left: 10px; }
+            body .game .wrap_container .sub_container.second .form .answer .form-control {
+              width: 90%;
+              max-width: none; } }
+
+/*# sourceMappingURL=main.css.map */
