@@ -5,7 +5,7 @@ In this game the user has to guess the artist by its album names. In each game t
 I used AngularJS for front-end, Node.js for backend and iTunes API for music data (<a href="https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api/">Read more</a>
 )
 
-
+![screenshot](/public/screenshots/screen1.png)
 
 Limitations/TBD: 
 * Currently supports limitted number of artists
